@@ -117,6 +117,30 @@
             40% { transform: translateY(-12px) translateX(-50%); }
             60% { transform: translateY(-6px) translateX(-50%); }
         }
+
+        /* Otimizações para Mobile (Telemóvel) */
+        @media (max-width: 768px) {
+            .step {
+                min-height: auto; /* Remove a altura forçada da tela */
+                padding: 3rem 1.5rem; /* Mantém apenas um respiro agradável */
+            }
+            .step.first-step {
+                min-height: 100vh; /* Mantém apenas a 1ª página com altura total para o início */
+            }
+            .step.visual-bridge-section {
+                min-height: auto;
+                padding: 0; /* Aproxima completamente as pontes visuais */
+            }
+            .visual-icon {
+                font-size: 2rem;
+            }
+            .visual-line {
+                height: 35px; /* Linhas muito mais curtas e diretas */
+            }
+            .slide-image {
+                transform: translateY(20px) scale(0.98); /* Deslize mais subtil em ecrãs pequenos */
+            }
+        }
     </style>
 </head>
 <body>
@@ -126,7 +150,7 @@
     <main id="scrolly-container">
         
         <!-- PÁGINA 01 -->
-        <section class="step" data-bg="#f7ede2">
+        <section class="step first-step" data-bg="#f7ede2">
             <img src="Trajetória do novato - Emily.pptx (1)-01.png" alt="Página 01" class="slide-image">
             <div class="scroll-indicator">
                 <span>Deslize</span>
